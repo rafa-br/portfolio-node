@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rafael-farias.com</title>
+    <meta name="description" content="This is my portfolio, presenting my experience and skills." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+	<div id="page">
+		<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand page-scroll" href="<%= "/Content/1"%>"><i class="ion-ios-analytics-outline"></i>Rafael-Farias.com</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="page-scroll" href="<%= "/Content/4"%>">Personal Data</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/list/2"%>">Experience</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/5"%>">Certificates/Courses</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/3"%>">Skills</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/6"%>">About</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="btn btn-success btn-sm pull-right"  href="<%= "/try"%>">
+								<span class="glyphicon glyphicon-play"></span>
+								<label>Try Yourself</label>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<section id="body" class="container height-full" style="padding-top: 25px;">	
+			<div class="page-body">
+					<div class="page-header">
+						<h1><%= item.title %></h1>
+					</div>
+					<div class="col-md-8">
+						<form class="col-md-8 form-horizontal" id="yourForm" method="post" action="/try/<%= method %>" enctype='application/json'>
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" name="name" 
+									class="form-control"
+									placeholder="ex. Emilly Spencer" value="<%= you.name %>">
+							</div>
+							<div class="form-group">
+								<label for="phone">Phone</label>
+								<div class="input-group">
+								<span class="input-group-addon">
+								   <span class="glyphicon glyphicon-phone"></span></span>
+								<input type="text" name="phone" 
+										class="form-control"
+										placeholder="ex. 353-548-8457" value="<%= you.phone %>">
+								</div>		
+							</div>
+							<div class="form-group">
+								<label for="email">E-mail</label>
+								<div class="input-group">
+								<span class="input-group-addon">
+								   <span class="glyphicon glyphicon-envelope"></span></span>
+								<input type="text" name="email" 
+										class="form-control"
+										placeholder="ex. emilly.spencer@domain.com" value="<%= you.email %>">
+								</div>		
+							</div>
+							<div class="form-group">
+								<label style="align:left;" for="genre">Genre</label><br>
+								<% if(you.genre == 0) { %>
+									<div class="radio radio-info radio-inline">
+										<input type="radio" id="genreMale" value="0" name="genre" checked="true">
+										<label for="genreMale">Male</label>
+									</div>
+									<div class="radio radio-inline">
+										<input type="radio" id="genreFemale" value="1" name="genre">
+										<label for="genreFemale">Female</label>
+									</div>
+								<% } else if(you.genre == 1) { %>
+									<div class="radio radio-info radio-inline">
+										<input type="radio" id="genreMale" value="0" name="genre">
+										<label for="genreMale">Male</label>
+									</div>
+									<div class="radio radio-inline">
+										<input type="radio" id="genreFemale" value="1" name="genre" checked="true">
+										<label for="genreFemale">Female</label>
+									</div>
+								<% } else { %>
+									<div class="radio radio-info radio-inline">
+										<input type="radio" id="genreMale" value="0" name="genre">
+										<label for="genreMale">Male</label>
+									</div>
+									<div class="radio radio-inline">
+										<input type="radio" id="genreFemale" value="1" name="genre">
+										<label for="genreFemale">Female</label>
+									</div>
+								<% }%>
+							</div>
+							
+							<div class="dropdown">
+								<button class="btn pull-right">Try me</button>
+							</div>
+							<input type="hidden" name="old_id" value="<%= you._id %>">
+						</form>
+					</div>
+				</div>
+		</section>
+		
+		<footer class="container" style="vertical-align:bottom;">
+			<hr>
+			Node development by Rafael-Farias.com
+		</footer>
+	</div>
+    
+    <!--scripts loaded here -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+  </body>
+</html>

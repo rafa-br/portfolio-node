@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rafael-farias.com</title>
+    <meta name="description" content="This is my portfolio, presenting my experience and skills." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+	<div id="page">
+		<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand page-scroll" href="<%= "/Content/1"%>"><i class="ion-ios-analytics-outline"></i>Rafael-Farias.com</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="page-scroll" href="<%= "/Content/4"%>">Personal Data</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/list/2"%>">Experience</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/5"%>">Certificates/Courses</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/3"%>">Skills</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="<%= "/Content/6"%>">About</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="btn btn-success btn-sm pull-right"  href="<%= "/try"%>">
+								<span class="glyphicon glyphicon-play"></span>
+								<label>Try Yourself</label>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<section id="body" class="container height-full" style="padding-top: 25px;">	
+			<div class="page-header">
+				<h1><%= item.title %></h1>
+			</div>
+			<div class="page-body">
+					<div class="col-md-8">
+						<section id="main">
+							<ul>
+								<li><%= item.content %></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+		</section>
+		<hr>
+		<footer class="container">
+			Node development by Rafael-Farias.com
+		</footer>
+	</div>
+    
+    <!--scripts loaded here -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
+  </body>
+</html>
