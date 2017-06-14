@@ -2,7 +2,7 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	bodyParser = require('body-parser');
 
-	var db = mongoose.connect("mongodb://localhost/YourAPI");
+	var db = mongoose.connect("mongodb://mongousr:mongo123@ds035653.mlab.com:35653/yourapi");
 
 var getTryRouter = function(subjects){
 	
